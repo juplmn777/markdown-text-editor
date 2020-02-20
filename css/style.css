@@ -1,12 +1,22 @@
 h1{
     text-align: center;
 }
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 textarea {
     display: block;
     margin: 20px auto;
     padding: 10px;
 }
-div {
-    width: 500px;
+
+.render {
+    width: 400px;
     margin: auto;
+    border: 1px solid #80808023;
+    background-color: crimson;
+    color: #fff;
 }

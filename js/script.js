@@ -1,6 +1,11 @@
 const text = document.querySelector("textarea");
-const render = document.querySelector("div");
+const render = document.querySelector(".render");
+
+text.value = localStorage.getItem("text");
+
+text.value ? render.innerHTML = localStorage.getItem("text") : null;
 
 text.addEventListener("keyup", function(){
-    render.innerHTML = marked(text.value);//rendu = valeur du text dans textarea
+    localStorage.setItem("text", text.value);
+    render.innerHTML = marked(text.value);//rendu = valeur du texte dans textarea
 });
